@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include 'search_bar_snippet.html' %}
+	<div class="card-columns">
+    {% if page_obj %}
+      {% for book in page_obj %}	
+      <div class="card clearfix">
+        <img class="card-img-top img-thumbnail" src="{{ book.book_cover.url }}">
+        <div class="card-body">
+          <div class="card-text">
+            <p><b>{{ book.title }} ~ &#8377; {{ book.price }}</b></p>
+            <p>Written by:
+             {% for author in book.written_by.all %}
+              {{ author.first_name }} {{ author.last_name }}</p>
+             {% endfor %}
+            <p>Genre: {{ book.genre }}</p>
+            <p>Pages : {{ book.pages }}</p>
+            <p>Language : {{ book.language }}</p>
+            <p>First Published : {{ book.first_published|date:"d M Y"}}</p>
+          </div>
+        </div>
+        <a  class="btn btn-sm btn-block btn-secondary" 
+          href="{% url 'read_book' book.slug %}">Read Online</a>
+        </div>
+      {% endfor %}
+    {% else %}
+    <div class="container d-flex justify-content-center" style="height: 30rem">
+      <h5 class="text-secondary">Oops! No book found.</h5>
+    </div>
+    {% endif %}
+	</div>
+	{% include 'pagination_snippet.html' %}
+{% endblock content %}

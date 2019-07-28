@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+          <a href="{% url 'home' %}" class="navbar-brand" id="logo">Lost Biblioteka</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav">
+            	<li class="nav-item"><a href="{% url 'home' %}" 
+                class="nav-link {% if request.path == '/' %} active {% endif %}">home</a></li>
+            	<li class="nav-item"><a href="{% url 'books' %}" 
+                class="nav-link {% if request.path == '/books/' %} active {% endif %}">books</a></li>
+            	<li class="nav-item"><a href="{% url 'authors' %}" 
+                class="nav-link {% if request.path == '/authors/'%} active {% endif %}">authors</a></li>
+            	<li class="nav-item"><a href="{% url 'genres' %}"
+               class="nav-link {% if request.path == '/books/genres/' %} active {% endif %}">genres</a></li>
+            	<li class="nav-item"><a href="{% url 'about_page' %}"
+               class="nav-link {% if request.path == '/about/' %} active {% endif %}">about</a></li>
+            </ul>
+          </div>
+</nav>

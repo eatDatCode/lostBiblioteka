@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div class="card-columns">
+		{% for genre in genres %}
+			<div class="card">
+				<a class="links d-flex justify-content-center" 
+				href="{{ genre.get_absolute_url }}">
+					#{{ genre.genre }}
+				</a>
+			</div>	
+		{% endfor %}
+	</div>
+{% endblock content %}

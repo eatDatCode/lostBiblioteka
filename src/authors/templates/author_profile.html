@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div class="card">
+		<div class="row">
+			<div class="col-sm-3">
+				<img src="{{ author.avatar.url }}" 
+				alt="{{ author.first_name }}" class="img-thumbnail">
+			</div>
+			<div class="col-sm-9">
+				<p class="card-text">
+					Honor: {{ author.honor }}
+				</p>
+				<p class="card-text">
+					First Name: {{ author.first_name }}
+				</p>
+				<p class="cart-text">
+					Last Name: {{ author.last_name }}
+				</p>
+				<p class="cart-text">
+					DOB : {{ author.dob|date: "d M, y"}}
+				</p>
+				<p class="card-text">
+					Country: {{ autho.place }}	
+				</p>
+				<a href="#"
+				class="btn btn-sm btn-block btn-secondary">
+					See {% if author.honor=='mr.'%} his {% else %}
+					her{% endif %}books</a>
+			</div>
+		</div>
+	</div>
+{% endblock content %}
