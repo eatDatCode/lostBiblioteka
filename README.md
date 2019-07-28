@@ -27,7 +27,7 @@
   ##### _Description_: `This page has all the famous catagories of books and users can click on them to look which books fall into that genre. Every single link leads to a list books.`
   
  # Some Mobile View Experiece
- ![Home](screenshots/home-mobile.png) ![Authors](screenshots/authors-mobile.png) ![Genre](screenshots/genre-mobile.png)
+ ![Home](screenshots/home-mobile.png) ![Authors](screenshots/authors-mobile.png)
   ##### _Description_: `After all it uses bootstrap the latest version 4.3. So the mobile experience is awesome and the menu will be collasped in a humburger toggle button at the right top corner.`
   
   
