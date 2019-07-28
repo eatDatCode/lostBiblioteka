@@ -25,7 +25,7 @@ SECRET_KEY = 'vv3v)4w(e+!mjp-ci7%(1ku)=(j(27%i%2r%93h^3ihu(v1xpb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','hank']
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
